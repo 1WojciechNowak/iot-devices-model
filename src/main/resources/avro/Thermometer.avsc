@@ -1,0 +1,24 @@
+[
+    {
+        "type": "record",
+        "namespace": "ai.wojciechnowak.bigdata.model.iotdevice.avro",
+        "name": "Location",
+        "doc": "Avro Schema for the Thermometer",
+        "fields": [
+            { "name": "latitude", "type": "double" },
+            { "name": "longitude", "type": "double" }
+        ]
+    },
+    {
+        "type": "record",
+        "namespace": "ai.wojciechnowak.bigdata.model.iotdevice.avro",
+        "name": "Thermometer",
+        "doc": "Avro Schema for the Thermometer",
+        "fields": [
+            { "name": "deviceId", "type": "string", "logicalType": "UUID", "doc": "Device Identifier" },
+            { "name": "temperature", "type": "int", "doc": "Temperature (in Celsius Degree)" },
+            { "name": "location", "type": "Location", "doc": "Device Location" },
+            { "name": "timestamp", "type": "long", "logicalType": "timestamp-millis", "doc": "Time of Measurement" }
+        ]
+    }
+]
